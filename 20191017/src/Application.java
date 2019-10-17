@@ -3,6 +3,7 @@ public class Application {
     public static void main(String[] args) {
         System.out.println("Hello World");
 
+        // Kreiramo varijable i dodajemo im vrijednosti
         int a = 5;
         System.out.println("varijabla a = " + a);
 
@@ -24,6 +25,7 @@ public class Application {
         String str = "Algebra";
         System.out.println(str);
 
+        // Rad s IF-om (kontrola toka)
         int temp = 10;
 
         if (temp > 0) {
@@ -34,27 +36,31 @@ public class Application {
             System.out.println("Hladno je");
         }
 
+        // Rad s petljama
+        // while petlja
         while (temp > 0) {
             System.out.println("Temp: " + temp);
             temp--; // temp = temp - 1;
             // temp++;  // temp = temp + 1;
         }
 
+        // do-while petlja
         temp = 5;
         do {
             System.out.println("do-while: " + temp);
             temp--;
         } while (temp > 0);
 
+        // for petlja
         for (int i = 0; i < 10; i++) {
             System.out.println("i: " + i);
         }
 
+        // Zadatci za samostalno vjezbanje
         System.out.println("-----------------");
 
         // zadatak 1:
         // ispisi sve brojeve od 0 do 1000
-
         for (int i = 0; i <= 1000; i++) {
             System.out.println("i: " + i);
         }
@@ -88,6 +94,7 @@ public class Application {
 
         // zad 4
         // napraviti tablicu mnozenja 10x10
+        
 
     }
 }
