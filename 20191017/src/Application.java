@@ -87,7 +87,7 @@ public class Application {
         }
 
         // zad 4
-        // 
+        // napraviti tablicu mnozenja 10x10
 
     }
 }
