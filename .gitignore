@@ -12,9 +12,10 @@ hs_err_pid*
 .idea/**/usage.statistics.xml
 .idea/**/dictionaries
 .idea/**/shelf
-
+.idea/
 # File-based project format
 *.iws
 
 # IntelliJ
 out/
+
