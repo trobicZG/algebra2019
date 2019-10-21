@@ -7,7 +7,7 @@ public class ScannerExample {
         Scanner scanner = new Scanner(System.in);
 
         System.out.println("Unesi neki tekst: ");
-        String testInput = scanner.next();
+        String testInput = scanner.nextLine();
 
         System.out.println("Izlaz je: " + testInput);
     }
