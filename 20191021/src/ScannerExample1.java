@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class ScannerExample {
+public class ScannerExample1 {
     // Primjer upisa s konzole
 
     public static void main (String[] args) {

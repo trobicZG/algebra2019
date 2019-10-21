@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class Examples {
+public class ScannerExample2 {
 
     // Napišite program koji će u prvom redu ispisati vaše ime i prezime,
     // nakon toga jedan red prazno i u trećem redu naziv mjesta u kojem živite.
