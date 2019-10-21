@@ -14,18 +14,28 @@ public class StudentGrades {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
+        System.out.println("Postotak: ");
         int percentage = scanner.nextInt();
 
         if (percentage >= 90) {
             System.out.println("Izvrstan");
-        } else if (percentage >= 80) {
+            return;
+        }
+        if (percentage >= 80) {
             System.out.println("Vrlo dobar");
-        } else if (percentage >= 70) {
+            return;
+        }
+        if (percentage >= 70) {
             System.out.println("Dobar");
-        } else if (percentage >= 60) {
+            return;
+        }
+        if (percentage >= 60) {
             System.out.println("Dovoljan");
-        } else {
+            return;
+        }
+        if (percentage < 60) {
             System.out.println("Nedovoljan");
+            return;
         }
     }
 }
