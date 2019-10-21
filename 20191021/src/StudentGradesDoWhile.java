@@ -7,6 +7,9 @@ public class StudentGradesDoWhile {
 //
 //    Ako unese bilo koji broj van dopustenog raspona treba mu ispisati poruku o nevaljanom unosu.
     public static void main(String[] args) {
+
+        final int VALUE_TO_EXIT_APPLICATION = 0;
+
         Scanner scanner = new Scanner(System.in);
         int grade = 0;
 
@@ -37,6 +40,6 @@ public class StudentGradesDoWhile {
                     System.out.println("Neispravan unos!");
             }
 
-        } while (grade != 0);
+        } while (grade != VALUE_TO_EXIT_APPLICATION);
     }
 }
