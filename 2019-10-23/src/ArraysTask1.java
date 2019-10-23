@@ -1,0 +1,2 @@
+public class ArraysTask1 {
+}

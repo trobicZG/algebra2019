@@ -11,5 +11,12 @@ public class Arrays1 {
             System.out.println(numbers[i]);
         }
 
+        System.out.println("---------------------------------");
+
+        for (int n : numbers) {
+            System.out.println(n);
+
+        }
+
     }
 }
