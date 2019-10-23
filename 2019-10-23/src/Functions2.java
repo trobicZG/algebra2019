@@ -6,7 +6,6 @@ public class Functions2 {
         drawRectagle(5,20,'a');
         System.out.println();
         drawRectagle(10,50,'*');
-
     }
 
     static void drawRectagle(int height, int width, char c) {
