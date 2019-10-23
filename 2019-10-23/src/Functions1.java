@@ -45,10 +45,12 @@ public class Functions1 {
         boolean b33 = s5 == s7;
         boolean b34 = s5 == new String("algebra");
 
-        printCharacters(20);
+        printCharacters(20, "x");
         System.out.println();
         System.out.println();
-        printCharacters(50);
+        printCharacters(50, "*");
+        System.out.println();
+        printCharacters(100, "a");
     }
 
     static Integer getMonth(String date) {
@@ -63,9 +65,9 @@ public class Functions1 {
         return false;
     }
 
-    static void printCharacters(int howMany) {
+    static void printCharacters(int howMany, String whatToPrint) {
         for (int i = 0; i < howMany; i++) {
-            System.out.println("*");
+            System.out.print(whatToPrint);
         }
     }
 
