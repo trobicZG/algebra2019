@@ -1,6 +1,6 @@
 package oop;
 
-public class Animal {
+public abstract class Animal {
     private String color;
     private Double speed;
     private int legsCount;
