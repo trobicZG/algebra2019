@@ -10,7 +10,7 @@ import java.util.Scanner;
 //         *******
 //        *********
 
-public class Example1 {
+public class Task1Triangle {
     public static void main(String[] args) {
 
         System.out.println("Visina trokuta: ");
