@@ -6,6 +6,10 @@ public class Zad1 {
 
         System.out.println("height: ");
         int height = scanner.nextInt();
+        printTriangle(height);
+    }
+
+    public static void printTriangle(int height) {
         int blank=height-1;
         int stars=1;
         for (int i=0; i<height; i++) {
