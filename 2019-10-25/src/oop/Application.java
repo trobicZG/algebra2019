@@ -6,6 +6,8 @@ public class Application {
        Dog dog = new Dog();
        Cat cat = new Cat();
 
+       Animal a = new Cat();
+
        dog.run();
        cat.run();
        dog.speak("Algebra");
