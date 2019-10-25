@@ -1,6 +1,6 @@
 package oop;
 
-public abstract class Animal {
+public abstract class Animal implements AnimalInterface {
     private String color;
     private Double speed;
     private int legsCount;

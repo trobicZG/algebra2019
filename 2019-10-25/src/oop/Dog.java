@@ -1,6 +1,6 @@
 package oop;
 
-public class Dog extends Animal implements AnimalInterface {
+public class Dog extends Animal {
 
     @Override
     public void run() {
