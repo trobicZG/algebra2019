@@ -15,6 +15,6 @@ public class Zad3 {
         int days2=days%30;
         int years=months/12;
         months=months-(years*12);
-        System.out.println(days2 + " - " + months + " - " + years);
+        System.out.println(years + "god " + months + "mj " + days2 + "d");
     }
 }
