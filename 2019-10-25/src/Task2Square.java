@@ -11,7 +11,6 @@ public class Task2Square {
         int size = scanner.nextInt();
 
         drawSquare(size);
-
     }
 
     private static void drawSquare(int size) {
