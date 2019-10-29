@@ -29,5 +29,10 @@ public class Application {
         m.stopEngine();
         m.honk(2);
 
+        int[] abc = {1,2,3};
+        System.out.println(abc[10]);
+
+        System.out.println("abc");
+
     }
 }
