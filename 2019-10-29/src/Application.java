@@ -29,8 +29,6 @@ public class Application {
             m.startEngine();
             m.stopEngine();
             m.honk(2);
-        } catch (IllegalStateException e) {
-            System.out.println("ERROR " + e.getMessage());
         } catch (EngineChangeStateException e) {
             System.out.println(e.getMessage());
         }

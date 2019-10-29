@@ -15,7 +15,7 @@ public class Motorcycle extends Vehicle {
             this.isEngineOn = false;
             return;
         }
-        throw new IllegalStateException("Engine is already off!");
+        throw new EngineChangeStateException(this.getManufacturer(), this.getModel(), "STOP");
     }
 
     @Override

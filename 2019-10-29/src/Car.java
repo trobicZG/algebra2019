@@ -21,7 +21,7 @@ public class Car extends Vehicle {
     @Override
     public void startEngine() {
         if (this.isEngineOn) {
-            throw new IllegalStateException("Engine is already on!");
+            throw new EngineChangeStateException(this.getManufacturer(), this.getModel(), "START");
         }
         System.out.println("Starting engine for car " + this.getModel());
         this.isEngineOn = true;
@@ -34,7 +34,7 @@ public class Car extends Vehicle {
             this.isEngineOn = false;
             return;
         }
-        throw new IllegalStateException("Engine is already off!");
+        throw new EngineChangeStateException(this.getManufacturer(), this.getModel(), "STOP");
     }
 
     @Override
