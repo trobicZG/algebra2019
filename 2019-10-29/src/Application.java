@@ -18,27 +18,20 @@ public class Application {
         m.setManufacturer(new Manufacturer("Yamaha", "Japanska 123"));
 
 
-        c.startEngine();
-        c.stopEngine();
-        c.stopEngine();
-        c.honk(3);
-
-        m.stopEngine();
-        m.startEngine();
-        m.startEngine();
-        m.stopEngine();
-        m.honk(2);
-
         try {
-            int[] abc = {1, 2, 3};
-            System.out.println(abc[10]);
-        } catch (IndexOutOfBoundsException e) {
-            System.out.println("Error while accessing array element!");
-        } finally { // izvrsava se uvijek, neovisno dogodio se exception ili ne
-            System.out.println("Finally part");
-        }
+            c.startEngine();
+            c.stopEngine();
+            c.stopEngine();
+            c.honk(3);
 
-        System.out.println("abc");
+            m.stopEngine();
+            m.startEngine();
+            m.startEngine();
+            m.stopEngine();
+            m.honk(2);
+        } catch (IllegalStateException e) {
+            System.out.println("ERROR " + e.getMessage());
+        }
 
     }
 }
