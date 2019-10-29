@@ -10,5 +10,12 @@ public class Application {
 
         c.setManufacturer(new Manufacturer("VW", "Address 1"));
 
+        Motorcycle m = new Motorcycle();
+        m.setColor("Blue");
+        m.setModel("Tracer 900");
+        m.setMileage(20000D);
+        m.setTopSpeed(270D);
+        m.setManufacturer(new Manufacturer("Yamaha", "Japanska 123"));
+
     }
 }
