@@ -1,9 +1,11 @@
-public abstract class Vehicle {
+public abstract class Vehicle implements VehicleInterface {
     private String color;
     private Double mileage; // koliko prijedenih kilometara
     private Manufacturer manufacturer;
     private String model;
     private Double topSpeed;
+
+    protected boolean isEngineOn = false;
 
     public String getColor() {
         return color;

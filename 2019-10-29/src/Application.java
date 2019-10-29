@@ -17,5 +17,21 @@ public class Application {
         m.setTopSpeed(270D);
         m.setManufacturer(new Manufacturer("Yamaha", "Japanska 123"));
 
+
+        try {
+            c.startEngine();
+            c.stopEngine();
+            //c.stopEngine();
+            c.honk(3);
+
+            //m.stopEngine();
+            m.startEngine();
+            m.startEngine();
+            m.stopEngine();
+            m.honk(2);
+        } catch (EngineChangeStateException e) {
+            System.out.println(e.getMessage());
+        }
+
     }
 }
