@@ -17,7 +17,6 @@ public class Application {
         m.setTopSpeed(270D);
         m.setManufacturer(new Manufacturer("Yamaha", "Japanska 123"));
 
-
         try {
             c.changeEngineState(EngineStateConstants.ENGINE_START);
             c.changeEngineState(EngineStateConstants.ENGINE_STOP);
