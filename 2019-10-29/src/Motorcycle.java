@@ -2,7 +2,7 @@ public class Motorcycle extends Vehicle {
     @Override
     public void startEngine() {
         if (this.isEngineOn) {
-            throw new IllegalStateException("Engine is already on!");
+           throw new EngineChangeStateException(this.getManufacturer(), this.getModel(), "START");
         }
         System.out.println("Starting engine for motorcycle " + getModel());
         this.isEngineOn = true;

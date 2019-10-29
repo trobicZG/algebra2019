@@ -21,16 +21,18 @@ public class Application {
         try {
             c.startEngine();
             c.stopEngine();
-            c.stopEngine();
+            //c.stopEngine();
             c.honk(3);
 
-            m.stopEngine();
+            //m.stopEngine();
             m.startEngine();
             m.startEngine();
             m.stopEngine();
             m.honk(2);
         } catch (IllegalStateException e) {
             System.out.println("ERROR " + e.getMessage());
+        } catch (EngineChangeStateException e) {
+            System.out.println(e.getMessage());
         }
 
     }
