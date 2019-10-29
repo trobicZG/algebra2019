@@ -1,11 +1,11 @@
 public class Car extends Vehicle {
-    private Double doorsCount; // broj vrata
+    private Integer doorsCount; // broj vrata
 
-    public Double getDoorsCount() {
+    public Integer getDoorsCount() {
         return doorsCount;
     }
 
-    public void setDoorsCount(Double doorsCount) {
+    public void setDoorsCount(Integer doorsCount) {
         this.doorsCount = doorsCount;
     }
 }
