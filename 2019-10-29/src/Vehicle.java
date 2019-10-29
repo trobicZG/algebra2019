@@ -5,6 +5,8 @@ public abstract class Vehicle implements VehicleInterface {
     private String model;
     private Double topSpeed;
 
+    protected boolean isEngineOn = false;
+
     public String getColor() {
         return color;
     }

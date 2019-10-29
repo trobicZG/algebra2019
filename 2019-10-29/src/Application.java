@@ -20,8 +20,11 @@ public class Application {
 
         c.startEngine();
         c.stopEngine();
+        c.stopEngine();
         c.honk(3);
 
+        m.stopEngine();
+        m.startEngine();
         m.startEngine();
         m.stopEngine();
         m.honk(2);
