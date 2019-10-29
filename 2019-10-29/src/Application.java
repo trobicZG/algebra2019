@@ -34,6 +34,8 @@ public class Application {
             System.out.println(abc[10]);
         } catch (IndexOutOfBoundsException e) {
             System.out.println("Error while accessing array element!");
+        } finally { // izvrsava se uvijek, neovisno dogodio se exception ili ne
+            System.out.println("Finally part");
         }
 
         System.out.println("abc");
