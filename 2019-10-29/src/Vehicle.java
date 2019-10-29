@@ -1,8 +1,5 @@
 public abstract class Vehicle implements VehicleInterface {
 
-    private final String START_ENGINE_COMMAND = "START";
-    private final String STOP_ENGINE_COMMAND = "STOP";
-
     private String color;
     private Double mileage; // koliko prijedenih kilometara
     private Manufacturer manufacturer;
@@ -53,9 +50,9 @@ public abstract class Vehicle implements VehicleInterface {
 
     @Override
     public void changeEngineState(String state) {
-        if (state.equals(START_ENGINE_COMMAND)) {
+        if (state.equals(EngineStateConstants.ENGINE_START)) {
             startEngine();
-        } else if (state.equals(STOP_ENGINE_COMMAND)) {
+        } else if (state.equals(EngineStateConstants.ENGINE_STOP)) {
             stopEngine();
         } else {
             throw new IllegalStateException("Invalid command for engine state!");
@@ -64,7 +61,7 @@ public abstract class Vehicle implements VehicleInterface {
 
     private void startEngine() {
         if (this.isEngineOn) {
-            throw new EngineChangeStateException(this.getManufacturer(), getModel(), START_ENGINE_COMMAND);
+            throw new EngineChangeStateException(this.getManufacturer(), getModel(), EngineStateConstants.ENGINE_START);
         }
         System.out.println("Starting engine for " + this.getClass().getName() + " " + getManufacturer().getName() + " " + getModel());
         this.isEngineOn = true;
@@ -76,6 +73,6 @@ public abstract class Vehicle implements VehicleInterface {
             this.isEngineOn = false;
             return;
         }
-        throw new EngineChangeStateException(getManufacturer(), getModel(), STOP_ENGINE_COMMAND);
+        throw new EngineChangeStateException(getManufacturer(), getModel(), EngineStateConstants.ENGINE_STOP);
     }
 }
