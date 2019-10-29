@@ -21,12 +21,12 @@ public class Application {
         try {
             c.startEngine();
             c.stopEngine();
-            //c.stopEngine();
+            // c.stopEngine();
             c.honk(3);
 
             //m.stopEngine();
             m.startEngine();
-            m.startEngine();
+            //m.startEngine();
             m.stopEngine();
             m.honk(2);
         } catch (EngineChangeStateException e) {

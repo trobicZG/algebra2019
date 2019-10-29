@@ -46,4 +46,23 @@ public abstract class Vehicle implements VehicleInterface {
     public void setTopSpeed(Double topSpeed) {
         this.topSpeed = topSpeed;
     }
+
+    @Override
+    public void startEngine() {
+        if (this.isEngineOn) {
+            throw new EngineChangeStateException(this.getManufacturer(), getModel(), "START");
+        }
+        System.out.println("Starting engine for " + this.getClass().getName() + " " + getManufacturer().getName() + " " + getModel());
+        this.isEngineOn = true;
+    }
+
+    @Override
+    public void stopEngine() {
+        if (this.isEngineOn) {
+            System.out.println("Stopping engine for " + this.getClass().getName() + " " + getManufacturer().getName() + " " + getModel());
+            this.isEngineOn = false;
+            return;
+        }
+        throw new EngineChangeStateException(getManufacturer(), getModel(), "STOP");
+    }
 }
