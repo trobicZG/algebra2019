@@ -8,9 +8,7 @@ public class Application {
         c.setModel("Golf 7");
         c.setTopSpeed(300D);
 
-        Manufacturer manufacturer = new Manufacturer();
-        manufacturer.setAddress("Address 1");
-        manufacturer.setName("VW");
+        Manufacturer manufacturer = new Manufacturer("VW", "Address 1");
 
         c.setManufacturer(manufacturer);
 
