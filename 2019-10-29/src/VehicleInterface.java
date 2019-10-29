@@ -1,5 +1,4 @@
 public interface VehicleInterface {
-    void startEngine();
-    void stopEngine();
     void honk(int howManySecond);
+    void changeEngineState(String newState);
 }
