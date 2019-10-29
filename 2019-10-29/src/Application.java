@@ -29,8 +29,12 @@ public class Application {
         m.stopEngine();
         m.honk(2);
 
-        int[] abc = {1,2,3};
-        System.out.println(abc[10]);
+        try {
+            int[] abc = {1, 2, 3};
+            System.out.println(abc[10]);
+        } catch (Exception e) {
+            System.out.println("Error while accessing array element!");
+        }
 
         System.out.println("abc");
 
