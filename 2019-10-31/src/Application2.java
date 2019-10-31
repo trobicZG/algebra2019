@@ -14,25 +14,15 @@ public class Application2 {
 
             if (randomNumber == 1) {
                 counter1++;
-            }
-
-            if (randomNumber == 2) {
+            } else if (randomNumber == 2) {
                 counter2++;
-            }
-
-            if (randomNumber == 3) {
+            } else if (randomNumber == 3) {
                 counter3++;
-            }
-
-            if (randomNumber == 4) {
+            } else if (randomNumber == 4) {
                 counter4++;
-            }
-
-            if (randomNumber == 5) {
+            } else if (randomNumber == 5) {
                 counter5++;
-            }
-
-            if (randomNumber == 6) {
+            } else if (randomNumber == 6) {
                 counter6++;
             }
 
