@@ -20,6 +20,8 @@ public class Application2 {
             }
         }
 
+        // CubeThrowing ct = new CubeThrowing(); -> not allowed because constructor is private
+
         System.out.println(counterMap.toString());
     }
 }
