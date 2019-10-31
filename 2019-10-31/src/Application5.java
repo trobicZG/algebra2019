@@ -16,7 +16,7 @@ public class Application5 {
             System.out.println("Unesi dob: ");
             int years = scanner.nextInt();
 
-            students.add(new Student(name, years););
+            students.add(new Student(name, years));
         }
 
         Double averageYears = 0D;
