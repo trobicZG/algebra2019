@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 
 public class Application5 {
@@ -14,18 +15,22 @@ public class Application5 {
             String name = scanner.next();
 
             System.out.println("Unesi dob: ");
-            int years = scanner.nextInt();
+            int age = scanner.nextInt();
 
-            students.add(new Student(name, years));
+            students.add(new Student(name, age));
         }
 
-        Double averageYears = 0D;
+        System.out.println("Average: " + calculateStudentAverageAge(students));
+    }
+
+    private static Double calculateStudentAverageAge(List<Student> students) {
+        Double sumAge = 0D;
 
         for (Student s : students) {
-            averageYears += s.getYears();
+            sumAge += s.getYears();
         }
 
-        System.out.println("Average: " + averageYears / NUMBER_OF_STUDENTS);
+        return sumAge / students.size();
     }
 
 }
