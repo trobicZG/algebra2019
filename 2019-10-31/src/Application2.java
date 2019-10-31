@@ -16,9 +16,6 @@ public class Application2 {
             }
         }
 
-        for (int i = 1; i <= 6; i++) {
-            System.out.println(i + ": " + counterMap.get(i));
-        }
-
+        System.out.println(counterMap.toString());
     }
 }
