@@ -16,10 +16,7 @@ public class Application5 {
             System.out.println("Unesi dob: ");
             int years = scanner.nextInt();
 
-            Student s = new Student();
-
-            s.setName(name);
-            s.setYears(years);
+            Student s = new Student(name, years);
 
             students.add(s);
         }
