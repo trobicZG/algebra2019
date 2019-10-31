@@ -2,6 +2,7 @@ import com.sun.org.apache.xpath.internal.operations.String;
 
 public class Application {
     public static void main(String[] args) {
+        // Calculator
 
         System.out.println("Zbrajanje 10 + 5");
         System.out.println(SimpleCalculator.sum(10D, 5D));
@@ -24,5 +25,6 @@ public class Application {
         // Wrapper class and primary type example
 //        double d1 = null; // this does not work
 //        Double d2 = null;
+
     }
 }
