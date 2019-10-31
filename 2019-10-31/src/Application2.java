@@ -1,55 +1,27 @@
+import java.util.ArrayList;
+
 public class Application2 {
     public static void main(String[] args) {
         // CUBE THROWING
 
-        int counter1 = 0;
-        int counter2 = 0;
-        int counter3 = 0;
-        int counter4 = 0;
-        int counter5 = 0;
-        int counter6 = 0;
+        ArrayList<Integer> list = new ArrayList<>();
+        list.add(0);
+        list.add(0);
+        list.add(0);
+        list.add(0);
+        list.add(0);
+        list.add(0);
 
         for (int i = 0; i < 999; i++) {
             int randomNumber = CubeThrowing.getRandomNumber();
 
-            if (randomNumber == 1) {
-                counter1++;
-                continue;
-            }
-
-            if (randomNumber == 2) {
-                counter2++;
-                continue;
-            }
-
-            if (randomNumber == 3) {
-                counter3++;
-                continue;
-            }
-
-            if (randomNumber == 4) {
-                counter4++;
-                continue;
-            }
-
-            if (randomNumber == 5) {
-                counter5++;
-                continue;
-            }
-
-            if (randomNumber == 6) {
-                counter6++;
-                continue;
-            }
-
+            list.set(randomNumber - 1, list.get(randomNumber - 1) + 1);
         }
 
-        System.out.println("1: " + counter1);
-        System.out.println("2: " + counter2);
-        System.out.println("3: " + counter3);
-        System.out.println("4: " + counter4);
-        System.out.println("5: " + counter5);
-        System.out.println("6: " + counter6);
+        for (int i = 0; i < list.size(); i++) {
+            System.out.println(i + 1 + ": " + list.get(i));
+        }
+
 
     }
 }
