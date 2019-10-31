@@ -1,4 +1,4 @@
-public class Calculator {
+public final class SimpleCalculator {
     public static Double sum(Double a, Double b) {
         return a + b;
     }
