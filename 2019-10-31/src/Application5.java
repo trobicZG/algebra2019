@@ -22,7 +22,7 @@ public class Application5 {
         Double averageYears = 0D;
 
         for (Student s : students) {
-            averageYears = averageYears + s.getYears();
+            averageYears += s.getYears();
         }
 
         System.out.println("Average: " + averageYears / NUMBER_OF_STUDENTS);
