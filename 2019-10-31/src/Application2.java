@@ -5,7 +5,6 @@ public class Application2 {
     private static final int MAX_VALUE = 6;
 
     public static void main(String[] args) {
-
         // CUBE THROWING
 
         HashMap<Integer, Integer> counterMap = new HashMap<>();
