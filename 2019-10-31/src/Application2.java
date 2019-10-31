@@ -14,16 +14,32 @@ public class Application2 {
 
             if (randomNumber == 1) {
                 counter1++;
-            } else if (randomNumber == 2) {
+                continue;
+            }
+
+            if (randomNumber == 2) {
                 counter2++;
-            } else if (randomNumber == 3) {
+                continue;
+            }
+
+            if (randomNumber == 3) {
                 counter3++;
-            } else if (randomNumber == 4) {
+                continue;
+            }
+
+            if (randomNumber == 4) {
                 counter4++;
-            } else if (randomNumber == 5) {
+                continue;
+            }
+
+            if (randomNumber == 5) {
                 counter5++;
-            } else if (randomNumber == 6) {
+                continue;
+            }
+
+            if (randomNumber == 6) {
                 counter6++;
+                continue;
             }
 
         }
