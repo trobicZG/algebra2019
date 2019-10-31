@@ -27,7 +27,7 @@ public class Application5 {
         Double sumAge = 0D;
 
         for (Student s : students) {
-            sumAge += s.getYears();
+            sumAge += s.getAge();
         }
 
         return sumAge / students.size();
