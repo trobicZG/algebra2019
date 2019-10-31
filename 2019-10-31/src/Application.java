@@ -14,6 +14,12 @@ public class Application {
         System.out.println(SimpleCalculator.divide(10D, 5D));
 
         System.out.println("Dijeljenje 10 / 0");
-        System.out.println(SimpleCalculator.divide(10D, 0D));
+        //System.out.println(SimpleCalculator.divide(10D, 0D));
+
+        System.out.println("Modified substract");
+        System.out.println(ModifiedCalculator.substract(10D, 5D));
+
+        
+
     }
 }
