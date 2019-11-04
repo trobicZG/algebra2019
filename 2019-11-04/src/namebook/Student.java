@@ -1,5 +1,6 @@
 package namebook;
 
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class Student {
@@ -49,11 +50,10 @@ public class Student {
         boolean isIdValid = false;
         while (!isIdValid) {
             System.out.println("ID number: ");
-            String tmp = scanner.next();
 
             try {
-                s.setId(Long.parseLong(tmp));
-            } catch (NumberFormatException e) {
+                s.setId(scanner.nextLong());
+            } catch (InputMismatchException e) {
                 System.out.println("ID is not valid. Try again!");
                 continue;
             }
