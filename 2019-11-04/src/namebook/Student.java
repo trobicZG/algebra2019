@@ -62,4 +62,14 @@ public class Student {
 
         return s;
     }
+
+    public static Student fromString(String input) {
+        String[] values = input.split(",");
+        Student s = new Student();
+        s.setId(Long.parseLong(values[0]));
+        s.setFirstName(values[1]);
+        s.setLastName(values[2]);
+
+        return s;
+    }
 }

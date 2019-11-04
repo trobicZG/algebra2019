@@ -1,10 +1,7 @@
 package namebook;
 
-import java.io.*;
-import java.util.HashMap;
-import java.util.InputMismatchException;
-import java.util.Map;
-import java.util.Scanner;
+import java.io.IOException;
+import java.util.*;
 
 public class Application {
     private static final Scanner scanner = new Scanner(System.in);
@@ -29,25 +26,13 @@ public class Application {
 
                 if (option == 1) {
                     Student s = Student.fromConsole();
-
-                    BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter("students.txt", true));
-                    bufferedWriter.write(s.toString());
-                    bufferedWriter.newLine();
-                    bufferedWriter.close();
+                    ReadWriteUtil.saveToTxt(s);
                 }
 
                 if (option == 2) {
-                    BufferedReader bufferedReader = new BufferedReader(new FileReader("students.txt"));
-                    String line;
-                    while ((line = bufferedReader.readLine()) != null) {
-                        String[] values = line.split(",");
-                        Student s = new Student();
-                        s.setId(Long.parseLong(values[0]));
-                        s.setFirstName(values[1]);
-                        s.setLastName(values[2]);
+                    ArrayList<Student> students = ReadWriteUtil.toStudentsList();
 
-                        System.out.println(s);
-                    }
+                    System.out.println("All students: " + students);
                 }
             } catch (InputMismatchException e) {
                 System.out.println("Invalid option");
@@ -56,6 +41,7 @@ public class Application {
                 System.out.println(e.getMessage());
             }
         }
+
     }
 
     private static void showMainMenu() {
