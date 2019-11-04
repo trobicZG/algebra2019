@@ -1,12 +1,17 @@
 package namebook;
 
 import java.io.*;
+import java.util.HashMap;
 import java.util.InputMismatchException;
+import java.util.Map;
 import java.util.Scanner;
 
 public class Application {
+    private static final Scanner scanner = new Scanner(System.in);
+    private static Map<Integer, String> allowedOptionsMap = new HashMap<>();
+
     public static void main(String[] args) throws IOException {
-        Scanner scanner = new Scanner(System.in);
+        populateAllowedOptions();
 
         boolean exitApplication = false;
         while (!exitApplication) {
@@ -69,9 +74,14 @@ public class Application {
     }
 
     private static void showMainMenu() {
-        System.out.println("Choose your option:");
-        System.out.println("0 -> Exit application");
-        System.out.println("1 -> Add new student");
-        System.out.println("2 -> Show all students");
+        for (int i = 0; i < allowedOptionsMap.size(); i++) {
+            System.out.println(i + " -> " + allowedOptionsMap.get(i));
+        }
+    }
+
+    private static void populateAllowedOptions() {
+        allowedOptionsMap.put(0, "Exit application.");
+        allowedOptionsMap.put(1, "Add new student.");
+        allowedOptionsMap.put(2, "Show all students.");
     }
 }
