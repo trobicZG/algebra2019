@@ -28,22 +28,7 @@ public class Application {
                 }
 
                 if (option == 1) {
-                    Student s = new Student();
-
-                    System.out.println("First name: ");
-                    s.setFirstName(scanner.next());
-
-                    System.out.println("Last name: ");
-                    s.setLastName(scanner.next());
-
-                    System.out.println("ID number: ");
-                    String tmp = scanner.next();
-
-                    try {
-                        s.setId(Long.parseLong(tmp));
-                    } catch (NumberFormatException e) {
-                        throw new IllegalArgumentException("ID must contain only numbers.");
-                    }
+                    Student s = Student.fromConsole();
 
                     BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter("students.txt", true));
                     bufferedWriter.write(s.toString());
@@ -84,4 +69,6 @@ public class Application {
         allowedOptionsMap.put(1, "Add new student.");
         allowedOptionsMap.put(2, "Show all students.");
     }
+
+
 }

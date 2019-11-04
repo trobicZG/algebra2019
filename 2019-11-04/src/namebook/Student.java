@@ -1,5 +1,7 @@
 package namebook;
 
+import java.util.Scanner;
+
 public class Student {
     private Long id;
     private String firstName;
@@ -32,5 +34,32 @@ public class Student {
     @Override
     public String toString() {
         return this.id + "," + this.firstName + "," + this.lastName;
+    }
+
+    public static Student fromConsole() {
+        Scanner scanner = new Scanner(System.in);
+        Student s = new Student();
+
+        System.out.println("First name: ");
+        s.setFirstName(scanner.next());
+
+        System.out.println("Last name: ");
+        s.setLastName(scanner.next());
+
+        boolean isIdValid = false;
+        while (!isIdValid) {
+            System.out.println("ID number: ");
+            String tmp = scanner.next();
+
+            try {
+                s.setId(Long.parseLong(tmp));
+            } catch (NumberFormatException e) {
+                System.out.println("ID is not valid. Try again!");
+                continue;
+            }
+            isIdValid = true;
+        }
+
+        return s;
     }
 }
