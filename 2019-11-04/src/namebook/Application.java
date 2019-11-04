@@ -50,7 +50,13 @@ public class Application {
                     BufferedReader bufferedReader = new BufferedReader(new FileReader("students.txt"));
                     String line;
                     while ((line = bufferedReader.readLine()) != null) {
-                        System.out.println(line);
+                        String[] values = line.split(",");
+                        Student s = new Student();
+                        s.setId(Long.parseLong(values[0]));
+                        s.setFirstName(values[1]);
+                        s.setLastName(values[2]);
+
+                        System.out.println(s);
                     }
                 }
             } catch (InputMismatchException e) {
