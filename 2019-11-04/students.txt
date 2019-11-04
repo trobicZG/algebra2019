@@ -1,3 +1,2 @@
-namebook.Student@7ea987ac
-namebook.Student@12a3a380
-namebook.Student@29453f44
+1,a,a
+2,b,b

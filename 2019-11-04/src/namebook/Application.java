@@ -1,8 +1,6 @@
 package namebook;
 
-import java.io.BufferedWriter;
-import java.io.FileWriter;
-import java.io.IOException;
+import java.io.*;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
@@ -46,7 +44,14 @@ public class Application {
                     bufferedWriter.write(s.toString());
                     bufferedWriter.newLine();
                     bufferedWriter.close();
+                }
 
+                if (option == 2) {
+                    BufferedReader bufferedReader = new BufferedReader(new FileReader("students.txt"));
+                    String line;
+                    while ((line = bufferedReader.readLine()) != null) {
+                        System.out.println(line);
+                    }
                 }
             } catch (InputMismatchException e) {
                 System.out.println("Invalid option");
