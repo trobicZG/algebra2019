@@ -1,10 +1,13 @@
 package namebook;
 
+import java.io.BufferedWriter;
+import java.io.FileWriter;
+import java.io.IOException;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class Application {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
         Scanner scanner = new Scanner(System.in);
 
         boolean exitApplication = false;
@@ -32,11 +35,18 @@ public class Application {
 
                     System.out.println("ID number: ");
                     String tmp = scanner.next();
+
                     try {
                         s.setId(Long.parseLong(tmp));
                     } catch (NumberFormatException e) {
                         throw new IllegalArgumentException("ID must contain only numbers.");
                     }
+
+                    BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter("students.txt", true));
+                    bufferedWriter.write(s.toString());
+                    bufferedWriter.newLine();
+                    bufferedWriter.close();
+
                 }
             } catch (InputMismatchException e) {
                 System.out.println("Invalid option");
