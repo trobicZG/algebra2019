@@ -19,8 +19,8 @@ public class Application {
             try {
                 int option = scanner.nextInt();
 
-                if (option != 0 && option != 1 && option != 2) {
-                    throw new IllegalArgumentException("Invalid option");
+                if (!allowedOptionsMap.containsKey(option)) {
+                    throw new IllegalArgumentException("Invalid option value.");
                 }
 
                 if (option == 0) {
