@@ -45,8 +45,8 @@ public class GymApplication {
                         }
 
                         if (option == SHOW_ALL_GYMS_CODE) {
-                            ArrayList<Gym> students = ReadWriteUtil.toStudentsList();
-                            System.out.println("All students: " + students);
+                            ArrayList<Gym> gyms = ReadWriteUtil.toGymsList();
+                            System.out.println("All gyms: " + gyms);
                         }
                     }
                 }

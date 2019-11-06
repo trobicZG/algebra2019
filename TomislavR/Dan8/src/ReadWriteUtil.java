@@ -3,28 +3,27 @@ import java.util.ArrayList;
 
 public class ReadWriteUtil {
 
-    public static void saveToTxt(Gym g) throws IOException {
-        File f = new File("gyms.txt");
-        int ID;
-        if (f.exists()) {
-            BufferedReader bufferedReader = new BufferedReader(new FileReader(f));
+    public static void saveToTxt(Gym gym) throws IOException {
+        File file = new File("gyms.txt");
+        if (file.exists()) {
+            BufferedReader bufferedReader = new BufferedReader(new FileReader(file));
 
             String line;
             while ((line = bufferedReader.readLine()) != null) {
-                Gym g1 = Gym.fromString(line);
-                g.setID(g1.getID()+1);
+                Gym gym1 = Gym.fromString(line);
+                gym.setID(gym1.getID()+1);
             }
         }
         else {
-            g.setID(1);
+            gym.setID(1);
         }
-        BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(f, true));
-        bufferedWriter.write(g.toString());
+        BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(file, true));
+        bufferedWriter.write(gym.toString());
         bufferedWriter.newLine();
         bufferedWriter.close();
     }
 
-    public static ArrayList<Gym> toStudentsList() throws IOException {
+    public static ArrayList<Gym> toGymsList() throws IOException {
         BufferedReader bufferedReader = new BufferedReader(new FileReader("gyms.txt"));
         ArrayList<Gym> gyms = new ArrayList<>();
 
