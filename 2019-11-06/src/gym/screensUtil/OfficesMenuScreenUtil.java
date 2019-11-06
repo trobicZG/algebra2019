@@ -4,7 +4,7 @@ import gym.constants.OfficesMenuOptionsConstants;
 
 import java.util.HashMap;
 
-public class OfficesMenuScreenUtil {
+public abstract class OfficesMenuScreenUtil {
 
     public static HashMap<Integer, String> getAllowedOptions() {
         HashMap<Integer, String> allowedOptions = new HashMap<>();

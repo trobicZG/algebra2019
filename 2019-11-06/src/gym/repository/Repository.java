@@ -48,9 +48,5 @@ public class Repository {
         }
 
         return allRows;
-
-
     }
-
-
 }
