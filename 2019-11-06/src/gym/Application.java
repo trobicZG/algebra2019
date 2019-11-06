@@ -1,12 +1,12 @@
 package gym;
 
 import gym.constants.MainMenuOptionsConstants;
-import gym.screensUtil.MainMenu;
-import gym.screensUtil.OfficesMenu;
+import gym.screensUtil.MainMenuScreenUtil;
+import gym.screensUtil.OfficesMenuScreenUtil;
 
 import java.util.Scanner;
 
-import static gym.screensUtil.AllMenus.showMenu;
+import static gym.screensUtil.AllMenusScreenUtil.showMenu;
 import static gym.util.ValidationUtil.isValidInput;
 
 public class Application {
@@ -16,13 +16,11 @@ public class Application {
 
     public static void main(String[] args) {
         while (true) {
-
             System.out.println("Choose an option: ");
-            showMenu(MainMenu.getAllowedOptions());
-
+            showMenu(MainMenuScreenUtil.getAllowedOptions());
             String input = scanner.next();
 
-            if (!(isValidInput(input, MainMenu.getAllowedOptions()))) {
+            if (!(isValidInput(input, MainMenuScreenUtil.getAllowedOptions()))) {
                 continue;
             }
 
@@ -34,15 +32,14 @@ public class Application {
             if (mainMenuOption == MainMenuOptionsConstants.OFFICES_CODE) {
                 while (true) {
                     System.out.println("Offices options:");
-                    showMenu(OfficesMenu.getAllowedOptions());
+                    showMenu(OfficesMenuScreenUtil.getAllowedOptions());
                     input = scanner.next();
 
-                    if (!isValidInput(input, OfficesMenu.getAllowedOptions())) {
+                    if (!isValidInput(input, OfficesMenuScreenUtil.getAllowedOptions())) {
                         continue;
                     }
 
                     int officesOption = Integer.parseInt(input);
-
 
                 }
             }

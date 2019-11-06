@@ -4,7 +4,7 @@ import java.util.HashMap;
 
 import static gym.constants.MainMenuOptionsConstants.*;
 
-public abstract class MainMenu {
+public abstract class MainMenuScreenUtil {
 
     public static HashMap<Integer, String> getAllowedOptions() {
         HashMap<Integer, String> allowedOptions = new HashMap<>();
