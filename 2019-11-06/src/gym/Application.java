@@ -51,6 +51,10 @@ public class Application {
                         break;
                     }
 
+                    if (officesOption == OfficesMenuOptionsConstants.SHOW_ALL_OFFICES) {
+                        officeService.showAllOffices();
+                        break;
+                    }
                 }
             }
         }

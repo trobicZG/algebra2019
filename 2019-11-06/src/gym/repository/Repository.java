@@ -3,6 +3,7 @@ package gym.repository;
 import gym.constants.ApplicationConstants;
 
 import java.io.*;
+import java.util.ArrayList;
 
 public class Repository {
     private static final int ID_INDEX = 0;
@@ -30,6 +31,25 @@ public class Repository {
         bufferedWriter.write(dataToWrite);
         bufferedWriter.newLine();
         bufferedWriter.close();
+    }
+
+    public static ArrayList<String> getAllRows(String fileName) throws IOException {
+        ArrayList<String> allRows = new ArrayList<>();
+        BufferedReader bufferedReader;
+        try {
+            bufferedReader = new BufferedReader(new FileReader(ApplicationConstants.OFFICES_FILE_NAME));
+        } catch (FileNotFoundException e) {
+            return allRows;
+        }
+
+        String line;
+        while ((line = bufferedReader.readLine()) != null) {
+            allRows.add(line);
+        }
+
+        return allRows;
+
+
     }
 
 
