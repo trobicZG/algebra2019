@@ -1,8 +1,5 @@
 import java.io.IOException;
-import java.util.HashMap;
-import java.util.InputMismatchException;
-import java.util.Map;
-import java.util.Scanner;
+import java.util.*;
 
 public class GymApplication {
 
@@ -45,6 +42,11 @@ public class GymApplication {
                         if (option == ADD_GYM_CODE) {
                             Gym gym=Gym.fromConsole();
                             ReadWriteUtil.saveToTxt(gym);
+                        }
+
+                        if (option == SHOW_ALL_GYMS_CODE) {
+                            ArrayList<Gym> students = ReadWriteUtil.toStudentsList();
+                            System.out.println("All students: " + students);
                         }
                     }
                 }

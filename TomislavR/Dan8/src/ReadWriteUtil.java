@@ -25,7 +25,7 @@ public class ReadWriteUtil {
     }
 
     public static ArrayList<Gym> toStudentsList() throws IOException {
-        BufferedReader bufferedReader = new BufferedReader(new FileReader("students.txt"));
+        BufferedReader bufferedReader = new BufferedReader(new FileReader("gyms.txt"));
         ArrayList<Gym> gyms = new ArrayList<>();
 
         String line;

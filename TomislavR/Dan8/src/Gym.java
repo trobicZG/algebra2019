@@ -57,10 +57,10 @@ public class Gym {
         Gym g = new Gym();
 
         System.out.println("Working hours: ");
-        g.setWorkingHours(scanner.next());
+        g.setWorkingHours(scanner.nextLine());
 
         System.out.println("Address: ");
-        g.setAddress(scanner.next());
+        g.setAddress(scanner.nextLine());
 
         System.out.println("City: ");
         g.setCity(scanner.next());
