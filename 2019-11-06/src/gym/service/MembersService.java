@@ -1,10 +1,12 @@
 package gym.service;
 
 import gym.constants.ApplicationConstants;
+import gym.mapper.MembersMapper;
 import gym.model.Member;
 import gym.repository.Repository;
 
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class MembersService {
@@ -27,9 +29,18 @@ public class MembersService {
         Repository.addNew(ApplicationConstants.MEMBERS_FILE_NAME, member.toString());
     }
 
-    public void showAllMembers() {
+    public void showAllMembers() throws IOException {
+        System.out.println("All members:");
+        ArrayList<String> allRows = Repository.getAllRows(ApplicationConstants.MEMBERS_FILE_NAME);
+        ArrayList<Member> allMembers = new ArrayList<>();
 
+        for (String s : allRows) {
+            allMembers.add(MembersMapper.toObject(s));
+        }
+
+        for (Member o : allMembers) {
+            System.out.println("MEMBERS: " + o.toString());
+        }
     }
-
 
 }

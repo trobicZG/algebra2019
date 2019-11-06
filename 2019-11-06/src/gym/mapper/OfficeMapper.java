@@ -3,7 +3,7 @@ package gym.mapper;
 import gym.constants.ApplicationConstants;
 import gym.model.Office;
 
-public class OfficeMapper {
+public abstract class OfficeMapper {
 
     private static final int ID_INDEX = 0;
     private static final int CITY_INDEX = 1;

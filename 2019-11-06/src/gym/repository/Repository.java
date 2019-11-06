@@ -37,7 +37,7 @@ public class Repository {
         ArrayList<String> allRows = new ArrayList<>();
         BufferedReader bufferedReader;
         try {
-            bufferedReader = new BufferedReader(new FileReader(ApplicationConstants.OFFICES_FILE_NAME));
+            bufferedReader = new BufferedReader(new FileReader(fileName));
         } catch (FileNotFoundException e) {
             return allRows;
         }
