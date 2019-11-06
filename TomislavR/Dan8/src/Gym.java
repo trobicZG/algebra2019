@@ -77,7 +77,7 @@ public class Gym {
         g.setID((int) Long.parseLong(values[0]));
         g.setWorkingHours(values[1]);
         g.setAddress(values[2]);
-        g.setPhoneNumber(values[3]);
+        g.setCity(values[3]);
         g.setPhoneNumber(values[4]);
 
         return g;

@@ -7,12 +7,12 @@ public class ReadWriteUtil {
         File f = new File("gyms.txt");
         int ID;
         if (f.exists()) {
-            BufferedReader bufferedReader = new BufferedReader(new FileReader("students.txt"));
+            BufferedReader bufferedReader = new BufferedReader(new FileReader(f));
 
             String line;
             while ((line = bufferedReader.readLine()) != null) {
                 Gym g1 = Gym.fromString(line);
-                g.setID(g1.getID());
+                g.setID(g1.getID()+1);
             }
         }
         else {
