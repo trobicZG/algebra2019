@@ -3,7 +3,7 @@ package model;
 import exceptions.TransportOverloadException;
 import interfaces.TransportVehicleInterface;
 
-public class TransportVehicle extends Vehicle implements TransportVehicleInterface {
+public abstract class TransportVehicle extends Vehicle implements TransportVehicleInterface {
 
     private int maxPeopleCount;
     private float maxCargoWeight;
