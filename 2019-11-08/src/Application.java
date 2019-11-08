@@ -1,3 +1,4 @@
+import interfaces.WeaponizedVehicleInterface;
 import model.FighterJet;
 import model.Tank;
 import model.TransportJet;
@@ -21,5 +22,20 @@ public class Application {
         tank.move(1000);
         System.out.println(tank.getGasLeftInTank());
 
+        System.out.println("TEST: FIGHTER JER");
+        test(fighterJet);
+        System.out.println("TEST: TANK");
+        test(tank);
+
+    }
+
+    public static void test(WeaponizedVehicleInterface weaponizedVehicle) {
+//        if (weaponizedVehicle.getClass().getSimpleName().equals("Tank")) {
+//            System.out.println("Ovo je provjera da je tenk!");
+//        }
+        if (weaponizedVehicle instanceof Tank) {
+            System.out.println("Ovo je provjera da je tenk!");
+        }
+        weaponizedVehicle.fire();
     }
 }
