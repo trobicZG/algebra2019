@@ -3,7 +3,7 @@ package model;
 import exceptions.NoAmunitionLeftException;
 import interfaces.WeaponizedVehicleInterface;
 
-public class WeaponizedVehicle extends Vehicle implements WeaponizedVehicleInterface {
+public abstract class WeaponizedVehicle extends Vehicle implements WeaponizedVehicleInterface {
     private int maxAmounitionCount;
     private int amunitionLeft;
 
