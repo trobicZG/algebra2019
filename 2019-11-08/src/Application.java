@@ -1,15 +1,12 @@
 import model.FighterJet;
 import model.Tank;
+import model.TransportJet;
 
 public class Application {
 
     public static void main(String[] args) {
-        FighterJet fighterJet = new FighterJet("lovac1", 200, 3);
-        fighterJet.liftOff();
-        fighterJet.fire();
-        fighterJet.fire();
-        fighterJet.fire();
-        fighterJet.fire();
+        TransportJet transportJet = new TransportJet("antunov", 5, 1000, 60000);
 
+        transportJet.liftOff();
     }
 }
