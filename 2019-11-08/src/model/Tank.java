@@ -4,9 +4,8 @@ import exceptions.NoAmunitionLeftException;
 import exceptions.NotEnoughFuelException;
 
 public class Tank extends WeaponizedVehicle {
-    public Tank(String name, float gasTankVolume, int maxAmounitionCount) {
-        super(name, gasTankVolume, maxAmounitionCount);
-        this.fuelConsumptioPer100Km = 10F;
+    public Tank(String name, float gasTankVolume, int maxAmounitionCount, float fuelConsumption) {
+        super(name, gasTankVolume, maxAmounitionCount, fuelConsumption);
     }
 
     @Override

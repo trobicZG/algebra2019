@@ -7,9 +7,8 @@ import interfaces.AirVehicleInterface;
 public class FighterJet extends WeaponizedVehicle implements AirVehicleInterface {
     private static final float GAS_NEEDED_FOR_LIFTOFF = 5F;
 
-    public FighterJet(String name, float gasTankVolume, int maxAmounitionCount) {
-        super(name, gasTankVolume, maxAmounitionCount);
-        this.fuelConsumptioPer100Km = 20F;
+    public FighterJet(String name, float gasTankVolume, int maxAmounitionCount, float fuelConsumption) {
+        super(name, gasTankVolume, maxAmounitionCount, fuelConsumption);
     }
 
     @Override

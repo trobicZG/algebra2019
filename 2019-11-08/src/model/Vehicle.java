@@ -18,10 +18,11 @@ public abstract class Vehicle implements VehicleInterface {
         this.fuelConsumptioPer100Km = fuelConsumptioPer100Km;
     }
 
-    public Vehicle(String name, float gasTankVolume) {
+    public Vehicle(String name, float gasTankVolume, float fuelConsumptioPer100Km) {
         this.name = name;
         this.gasTankVolume = gasTankVolume;
         this.gasLeftInTank = gasTankVolume;
+        this.fuelConsumptioPer100Km = fuelConsumptioPer100Km;
     }
 
     public String getName() {

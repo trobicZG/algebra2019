@@ -12,8 +12,8 @@ public abstract class TransportVehicle extends Vehicle implements TransportVehic
         return maxPeopleCount;
     }
 
-    public TransportVehicle(String name, float gasTankVolume, int maxPeopleCount, float maxCargoWeight) {
-        super(name, gasTankVolume);
+    public TransportVehicle(String name, float gasTankVolume, int maxPeopleCount, float maxCargoWeight, float feulConsumption) {
+        super(name, gasTankVolume, feulConsumption );
         this.maxPeopleCount = maxPeopleCount;
         this.maxCargoWeight = maxCargoWeight;
     }

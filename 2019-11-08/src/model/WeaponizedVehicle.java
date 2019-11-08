@@ -14,8 +14,8 @@ public abstract class WeaponizedVehicle extends Vehicle implements WeaponizedVeh
         return amunitionLeft;
     }
 
-    public WeaponizedVehicle(String name, float gasTankVolume, int maxAmounitionCount) {
-        super(name, gasTankVolume);
+    public WeaponizedVehicle(String name, float gasTankVolume, int maxAmounitionCount, float fuelConsumption) {
+        super(name, gasTankVolume, fuelConsumption);
         this.maxAmounitionCount = maxAmounitionCount;
         this.amunitionLeft = maxAmounitionCount;
     }
