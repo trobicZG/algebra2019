@@ -9,6 +9,7 @@ public class FighterJet extends WeaponizedVehicle implements AirVehicleInterface
 
     public FighterJet(String name, float gasTankVolume, int maxAmounitionCount) {
         super(name, gasTankVolume, maxAmounitionCount);
+        this.fuelConsumptioPer100Km = 20F;
     }
 
     @Override

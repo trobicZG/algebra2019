@@ -1,11 +1,12 @@
 package model;
 
 import exceptions.NoAmunitionLeftException;
+import exceptions.NotEnoughFuelException;
 
 public class Tank extends WeaponizedVehicle {
-
     public Tank(String name, float gasTankVolume, int maxAmounitionCount) {
         super(name, gasTankVolume, maxAmounitionCount);
+        this.fuelConsumptioPer100Km = 10F;
     }
 
     @Override
@@ -16,4 +17,5 @@ public class Tank extends WeaponizedVehicle {
         System.out.println("Firing from " + this.getClass().getSimpleName() + " " + getName());
         amunitionLeft--;
     }
+
 }

@@ -1,12 +1,22 @@
 package model;
 
+import exceptions.NotEnoughFuelException;
 import exceptions.RefilFuelException;
 import interfaces.VehicleInterface;
 
 public abstract class Vehicle implements VehicleInterface {
-    private float gasTankVolume;
-    private float gasLeftInTank;
+    protected float gasTankVolume;
+    protected float gasLeftInTank;
     private String name;
+    protected float fuelConsumptioPer100Km;
+
+    public float getFuelConsumptioPer100Km() {
+        return fuelConsumptioPer100Km;
+    }
+
+    public void setFuelConsumptioPer100Km(float fuelConsumptioPer100Km) {
+        this.fuelConsumptioPer100Km = fuelConsumptioPer100Km;
+    }
 
     public Vehicle(String name, float gasTankVolume) {
         this.name = name;
@@ -37,6 +47,13 @@ public abstract class Vehicle implements VehicleInterface {
 
     @Override
     public void move(float howManyKm) {
-        System.out.println("Moving vehicle " + name + " for " + howManyKm + "km.");
+        float fuelToConsume = (howManyKm / 100) * fuelConsumptioPer100Km;
+
+        if (fuelToConsume > getGasLeftInTank()) {
+            throw new NotEnoughFuelException(fuelToConsume, getGasLeftInTank());
+        }
+
+        System.out.println("Moving " + howManyKm + " km and using " + fuelToConsume + "L of fuel.");
+        gasLeftInTank -= fuelToConsume;
     }
 }
