@@ -3,7 +3,7 @@ package model;
 import exceptions.RefilFuelException;
 import interfaces.VehicleInterface;
 
-public class Vehicle implements VehicleInterface {
+public abstract class Vehicle implements VehicleInterface {
     private float gasTankVolume;
     private float gasLeftInTank;
     private String name;
@@ -15,10 +15,6 @@ public class Vehicle implements VehicleInterface {
 
     public String getName() {
         return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
     }
 
     public float getGasTankVolume() {
