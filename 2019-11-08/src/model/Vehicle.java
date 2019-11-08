@@ -11,6 +11,7 @@ public abstract class Vehicle implements VehicleInterface {
     public Vehicle(String name, float gasTankVolume) {
         this.name = name;
         this.gasTankVolume = gasTankVolume;
+        this.gasLeftInTank = gasTankVolume;
     }
 
     public String getName() {
