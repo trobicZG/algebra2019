@@ -1,0 +1,21 @@
+# DESCRIPTION
+Vojna vozila
+
+##
+- vozila leteca
+helikopteri, avioni,
+- vozila cestovna
+tenkovi,
+- zaposlenici
+vozaci, serviseri
+
+###
+
+Vozaci voze vozila
+Serviseri servisiraju vozila
+
+Vozila pucaju, krecu se
+Vozila - trebaju imati gorivo
+
+## NICE TO HAVE: spremanje u txt
+

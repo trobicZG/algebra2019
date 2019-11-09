@@ -1,0 +1,36 @@
+1. vojna vozila
+2. teretana
+3. knjiznica
+4. rucni satovi
+
+
+##### TERETANA   #####
+
+0. KORAK - konzola pita koju od opcija zelimo (poslovnice, clanovi, clanarine, oprema, izlaz iz aplikacije)
+
+- vise poslovnica
+{
+    mozemo imati jednu ili vise poslovnica
+    Isti klijent moze ici u sve nase poslovnice
+    radno vrijeme
+    svaka poslovnica: ID, radno vrijeme, adresa, grad, kontakt telefon
+
+KORACI:
+    {
+        1. unos ili pregled poslovnica
+        2. Ako je odabran unos - kroz konzolu omoguciti da se spremi nova poslovncia u tablicu pazeci da je ID veci od prethodnog za 1
+        3. Ako je odabran pregled poslovnica - ispisati sve poslovnice
+    }
+}
+- popis clanova
+{
+ime, prezime, oib
+}
+- clanarine
+{
+cijena
+vrstu clanarine (paketi: 2x tjedno, 3xtjedno, neograniceno)
+}
+- oprema {
+inventar - id, naziv sprave, lokacija/poslovnica, kolicina po toj poslovnici
+}
