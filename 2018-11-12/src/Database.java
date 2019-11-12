@@ -42,7 +42,7 @@ public class Database {
             String[] data = line.split(",");
 
             //if (Integer.parseInt(data[0]) == id) {
-            if (data[3].equals(phoneNumber)) {
+            if (data[5].equals(phoneNumber)) {
                 Person p = Mapper.toPerson(line);
                 personArrayList.add(p);
             }

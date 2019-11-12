@@ -11,11 +11,11 @@ public class App2 {
         System.out.println("1. Search by ID");
         System.out.println("2. Search by phone number");
 
-        int option = scanner.nextInt();
+        int option = Integer.parseInt(scanner.nextLine());
 
         if (option == 1) {
             System.out.println("ID:");
-            int id = scanner.nextInt();
+            int id = Integer.parseInt(scanner.nextLine());
 
             Person p = Database.findById(id);
             System.out.println(p.toString());
@@ -34,7 +34,7 @@ public class App2 {
                     System.out.println(i + ": " + persons.get(i).getFirstName() + " " + persons.get(i).getLastName());
                 }
 
-                int rowId = scanner.nextInt();
+                int rowId = Integer.parseInt(scanner.nextLine());
                 System.out.println(persons.get(rowId).toString());
             }
 
