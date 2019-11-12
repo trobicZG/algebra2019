@@ -2,6 +2,7 @@ import java.io.BufferedReader;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.List;
 
 public class Database {
@@ -29,10 +30,23 @@ public class Database {
                 return Mapper.toPerson(line);
             }
         }
+        //return null; DO NOT RETURN NULL VALUES
         throw new NoPersonFoundException(id);
     }
 
-    public static List<Person> findPersonsByPhoneNumber(String phoneNumber) {
-        return null;
+    public static List<Person> findPersonsByPhoneNumber(String phoneNumber) throws IOException {
+        String line;
+        ArrayList<Person> personArrayList = new ArrayList<>();
+
+        while ((line = bufferedReader.readLine()) != null) {
+            String[] data = line.split(",");
+
+            //if (Integer.parseInt(data[0]) == id) {
+            if (data[3].equals(phoneNumber)) {
+                Person p = Mapper.toPerson(line);
+                personArrayList.add(p);
+            }
+        }
+        return personArrayList;
     }
 }

@@ -1,4 +1,5 @@
 import java.io.IOException;
+import java.util.List;
 import java.util.Scanner;
 
 public class App2 {
@@ -19,7 +20,24 @@ public class App2 {
             Person p = Database.findById(id);
             System.out.println(p.toString());
         } else if (option == 2) {
-            //search by phone number
+            System.out.println("Phone number:");
+            String phoneNumber = scanner.nextLine();
+            List<Person> persons = Database.findPersonsByPhoneNumber(phoneNumber);
+
+            if (persons.size() == 0) {
+                System.out.println("No users found for that phone number.");
+            } else if (persons.size() == 1) {
+                System.out.println(persons.get(0).toString());
+            } else {
+                System.out.println("Found multiple people. Select row id of person you want details for:");
+                for (int i = 0; i < persons.size(); i++) {
+                    System.out.println(i + ": " + persons.get(i).getFirstName() + " " + persons.get(i).getLastName());
+                }
+
+                int rowId = scanner.nextInt();
+                System.out.println(persons.get(rowId).toString());
+            }
+
         }
 
 
