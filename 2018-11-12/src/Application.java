@@ -46,7 +46,5 @@ public class Application {
 
         Object[] personArrayList = personSet.toArray();
         Arrays.sort(personArrayList);
-
-
     }
 }
