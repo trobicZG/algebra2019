@@ -20,11 +20,13 @@ public class Application {
         Person p1 = new Person("Sasa", "Fajkovic", 30);
         Person p2 = new Person("Maja", "Majic", 31);
         Person p3 = new Person("Sasa", "Fajkovic", 30);
+        Person p4 = p2;
 
         Set<Person> personSet = new HashSet<>();
         personSet.add(p1);
         personSet.add(p2);
         personSet.add(p3);
+        personSet.add(p4);
 
     }
 }
