@@ -19,12 +19,13 @@ public class Database {
     public Database() throws FileNotFoundException {
     }
 
-    public static Person findById(int id) throws IOException {
+    public static Person findById(Integer id) throws IOException {
         String line;
         while ((line = bufferedReader.readLine()) != null) {
             String[] data = line.split(",");
 
-            if (data[0].equals(id)) {
+            //if (Integer.parseInt(data[0]) == id) {
+            if (data[0].equals(id.toString())) {
                 return Mapper.toPerson(line);
             }
         }
