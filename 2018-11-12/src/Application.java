@@ -29,6 +29,13 @@ public class Application {
         personSet.add(p3);
         personSet.add(p4);
 
+        ArrayList<Person> arrayList2 = new ArrayList<>();
+        arrayList2.add(p1);
+        arrayList2.add(p2);
+        arrayList2.add(p3);
+        arrayList2.add(p4);
+        Collections.reverse(arrayList2);
+
         if (p1.compareTo(p2) < 0) {
             System.out.println(p1.getFirstName() + " is younger then " + p2.getFirstName());
         } else if (p1.compareTo(p2) == 0) {
