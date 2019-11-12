@@ -3,6 +3,9 @@ import java.util.List;
 import java.util.Scanner;
 
 public class App2 {
+    private static final int SEARCH_BY_ID = 1;
+    private static final int SEARCH_BY_PHONE_NUMBER = 2;
+
     public static void main(String[] args) throws IOException {
 
         Scanner scanner = new Scanner(System.in);
@@ -13,18 +16,21 @@ public class App2 {
 
         int option = Integer.parseInt(scanner.nextLine());
 
-        if (option == 1) {
+        if (option == SEARCH_BY_ID) {
             System.out.println("ID:");
             int id = Integer.parseInt(scanner.nextLine());
 
-            Person p = Database.findById(id);
-            System.out.println(p.toString());
-        } else if (option == 2) {
+            try {
+                System.out.println(Database.findById(id).toString());
+            } catch (NoPersonFoundException e) {
+                System.out.println(e.getMessage());
+            }
+        } else if (option == SEARCH_BY_PHONE_NUMBER) {
             System.out.println("Phone number:");
             String phoneNumber = scanner.nextLine();
             List<Person> persons = Database.findPersonsByPhoneNumber(phoneNumber);
 
-            if (persons.size() == 0) {
+            if (persons.isEmpty()) {
                 System.out.println("No users found for that phone number.");
             } else if (persons.size() == 1) {
                 System.out.println(persons.get(0).toString());

@@ -5,7 +5,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Database {
+public abstract class Database {
 
     private static BufferedReader bufferedReader;
 
@@ -23,10 +23,10 @@ public class Database {
     public static Person findById(Integer id) throws IOException {
         String line;
         while ((line = bufferedReader.readLine()) != null) {
-            String[] data = line.split(",");
+            String[] data = line.split(Constants.DATA_SEPARATOR);
 
             //if (Integer.parseInt(data[0]) == id) {
-            if (data[0].equals(id.toString())) {
+            if (data[Constants.ID_INDEX].equals(id.toString())) {
                 return Mapper.toPerson(line);
             }
         }
@@ -42,7 +42,7 @@ public class Database {
             String[] data = line.split(",");
 
             //if (Integer.parseInt(data[0]) == id) {
-            if (data[5].equals(phoneNumber)) {
+            if (data[Constants.PHONE_NUMBER_INDEX].equals(phoneNumber)) {
                 Person p = Mapper.toPerson(line);
                 personArrayList.add(p);
             }
