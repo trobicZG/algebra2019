@@ -1,7 +1,4 @@
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.HashSet;
-import java.util.Set;
+import java.util.*;
 
 public class Application {
 
@@ -20,11 +17,11 @@ public class Application {
         hashSet.add(3);
         hashSet.add(2);
 
-        Person p1 = new Person("Sasa", "Fajkovic", 300);
+        Person p1 = new Person("Sasa", "Fajkovic", 30);
         Person p2 = new Person("Maja", "Majic", 31);
-        Person p3 = new Person("Sasa", "Fajkovic", 30);
+        Person p3 = new Person("Ivan", "Ivan", 40);
         Person p4 = p2;
-        p4.setAge(30);
+        p4.setAge(200);
 
         Set<Person> personSet = new HashSet<>();
         personSet.add(p1);
@@ -39,6 +36,10 @@ public class Application {
         } else {
             System.out.println(p1.getFirstName() + " is older then " + p2.getFirstName());
         }
+
+        Object[] personArrayList = personSet.toArray();
+        Arrays.sort(personArrayList);
+
 
     }
 }
