@@ -1,8 +1,31 @@
 import java.util.ArrayList;
+import java.util.Scanner;
 
 public class Application {
+    public static void main(String[] args) {
+        ArrayList<Person> persons = new ArrayList<Person>();
+        Scanner scanner = new Scanner(System.in);
 
-    ArrayList<Person> persons = new ArrayList<Person>();
-
-    for (int i=0; i < Constants.NUMBER_OF_PERSONS; i++)
+        for (int i = 0; i < Constants.NUMBER_OF_PERSONS; i++) {
+            Person person = new Person();
+            System.out.println("Enter first name : ");
+            person.setFirstName(scanner.nextLine());
+            System.out.println("Enter last name : ");
+            person.setLastName(scanner.nextLine());
+            while (true) {
+                System.out.println("Enter age : ");
+                try {
+                    int age = Integer.parseInt(scanner.nextLine());
+                    if (age < 0 || age >100) {
+                        throw new InvalidAgeException();
+                    }
+                    continue;
+                }
+                catch (Exception e) {
+                    System.out.println(e.getMessage());
+                }
+            }
+            persons.add(person);
+        }
+    }
 }
