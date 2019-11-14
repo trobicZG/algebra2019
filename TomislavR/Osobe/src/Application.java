@@ -31,8 +31,6 @@ public class Application {
             persons.add(person);
         }
         Collections.sort(persons);
-        for (int i = 0; i < Constants.NUMBER_OF_PERSONS; i++) {
-            System.out.println(persons.indexOf(i));
-        }
+        System.out.println(persons.toString());
     }
 }
