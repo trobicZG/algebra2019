@@ -5,7 +5,7 @@ import java.util.Collections;
 import java.util.Scanner;
 
 public class Application {
-    private static final int PEOPLE_TO_ENTER = 2;
+    private static final int PEOPLE_TO_ENTER = 5;
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
