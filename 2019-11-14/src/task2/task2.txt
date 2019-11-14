@@ -1,0 +1,5 @@
+Tablica mnozenja proizvoljne velicine
+Korisnik kroz konzolu odreduje koliko ce biti velika tablica mnozenje.
+
+Ako unese 5 onda crtamo 5x5
+Ako unese 10 onda crtamo 10x10
