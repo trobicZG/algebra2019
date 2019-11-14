@@ -17,14 +17,18 @@ public class Application {
             }
             int temp = number;
             int number2 = 0;
-            int d=1;
-            while (temp != 0) {
-                number2*=d;
-                number2 += temp % 10;
-                temp/=10;
-                d*=10;
+
+            while(temp!=0)
+            {
+                number2 = (number2*10)+temp % 10;
+                temp = temp/10;
             }
-            System.out.println(number2);
+            if(number == number2)
+                System.out.println("It is a Palindrome number.");
+            else
+                System.out.println("Not a palindrome");
+
+
         }
     }
 }
