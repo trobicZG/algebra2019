@@ -1,0 +1,7 @@
+Aplikacija "vrti u krug" dok se ne unese 0
+
+Ako je broj dijeljiv s 5 ili 7 ispisi - dijeljivo s 5 ili 7
+Ako je pozitivan ispisi pozitivan
+Ispisati da li je palindrom
+
+kada se odabere kraj treba ispisati koliko je brojeva upisano, njihovu sumu i prosjek
