@@ -1,0 +1,5 @@
+Crtanje geometrijskih likova
+
+1. kvadrat -> velicina stranica
+2. pravokutnik -> velicina stranica
+3. Trokut pravokutni -> visina trokuta
