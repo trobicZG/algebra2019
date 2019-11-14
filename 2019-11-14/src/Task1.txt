@@ -1,0 +1,9 @@
+Unos kroz konzolu 5 osoba
+Za svaku osobu: ime i prezime, starost
+
+Trebate ih poredati i ispisati od najmlade do najstarije
+Ispisati koliko iznosi prosjek godina svih osoba
+
+Aplikacija "vrti u krug" dok se ne unese 5 osoba
+Trebamo paziti na ulaz iz konzole.
+
