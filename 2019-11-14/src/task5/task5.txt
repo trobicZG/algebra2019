@@ -1,0 +1,3 @@
+Korisnik unese X sekundi
+Trebamo ispisati koliko je to sati, minuta i sekundi
+
