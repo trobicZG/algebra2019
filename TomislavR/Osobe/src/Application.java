@@ -1,4 +1,6 @@
 import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Collections;
 import java.util.Scanner;
 
 public class Application {
@@ -19,13 +21,18 @@ public class Application {
                     if (age < 0 || age >100) {
                         throw new InvalidAgeException();
                     }
-                    continue;
+                    person.setAge(age);
+                    break;
                 }
                 catch (Exception e) {
                     System.out.println(e.getMessage());
                 }
             }
             persons.add(person);
+        }
+        Collections.sort(persons);
+        for (int i = 0; i < Constants.NUMBER_OF_PERSONS; i++) {
+            System.out.println(persons.indexOf(i));
         }
     }
 }
