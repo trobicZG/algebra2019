@@ -1,3 +1,4 @@
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Application {
@@ -29,11 +30,18 @@ public class Application {
         }
 
         int counter = 0;
+        ArrayList<Integer> numbers = new ArrayList<Integer>();
         for (int i=firstNumber; i<=secondNumber; i++) {
-            if (i%x == 0)
+            if (i%x == 0) {
                 ++counter;
+                numbers.add(i);
+            }
         }
         System.out.println("  Ima " + counter + " takvih brojeva u zadanom rasponu.");
+        System.out.print( " To su brojevi : ");
+        for (int i = 0; i<numbers.size(); i++){
+            System.out.print(numbers.get(i) + " ");
+        }
 
     }
 }
