@@ -1,0 +1,12 @@
+Korisnik unese raspon brojeva. MOramo prekontrolirati da prvi broj je manji od drugog broja.
+Moramo paziti da su integeri.
+
+KOrisnik jos unese broj (x) za koji zeli vidjeti koliko ima brojeva u tom rasponu da su djeljivi s trazenim brojem (x)
+
+Pr.1
+OD: 1 DO: 1000
+X: 100  -> 100, 200... 1000
+
+Pr. 2
+OD: 5 DO: 17
+X: 3  -> 6, 9, 12, 15

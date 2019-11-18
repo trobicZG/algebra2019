@@ -1,0 +1,4 @@
+Radimo unos osoba kroz konzolu dok korisnik ne stisne neku tipku za izlaz iz unosa.
+Za sve osobe treba naci najmladu i najstariju.
+Osobe ispisati van po starosti od najmlade prema najstarijoj.
+
