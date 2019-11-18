@@ -1,5 +1,6 @@
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.Scanner;
 
 public class Application2 {
@@ -40,31 +41,24 @@ public class Application2 {
         }
 
         ArrayList<String> personsString = Repository.getAllRows();
-        int grade1 = 0;
-        int grade2 = 0;
-        int grade3 = 0;
-        int grade4 = 0;
-        int grade5 = 0;
+
+        HashMap<Integer, Integer> counterMap = new HashMap<>();
+
         for (int i = 0; i<personsString.size(); i++) {
             Person person = Person.mapper(personsString.get(i));
-            if (person.getGrade() == 1)
-                ++grade1;
-            if (person.getGrade() == 2)
-                ++grade2;
-            if (person.getGrade() == 3)
-                ++grade3;
-            if (person.getGrade() == 4)
-                ++grade4;
-            if (person.getGrade() == 5)
-                ++grade5;
+            if (counterMap.containsKey(person.getGrade())) {
+                counterMap.put(person.getGrade(), counterMap.get(person.getGrade()) + 1);
+            } else {
+                counterMap.put(person.getGrade(), 1);
+            }
         }
 
         System.out.println("Ocjene :");
-        System.out.println(" 1: " + grade1);
-        System.out.println(" 2: " + grade2);
-        System.out.println(" 3: " + grade3);
-        System.out.println(" 4: " + grade4);
-        System.out.println(" 5: " + grade5);
+        System.out.println(" 1: " + counterMap.get(1));
+        System.out.println(" 2: " + counterMap.get(2));
+        System.out.println(" 3: " + counterMap.get(3));
+        System.out.println(" 4: " + counterMap.get(4));
+        System.out.println(" 5: " + counterMap.get(5));
 
     }
 }
