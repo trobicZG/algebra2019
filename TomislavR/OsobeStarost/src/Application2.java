@@ -5,6 +5,8 @@ import java.util.Scanner;
 
 public class Application2 {
     public static void main(String[] args) throws IOException {
+        final int MIN_GRADE = 1;
+        final int MAX_GRADE = 5;
         String EXIT_INPUT = "x";
         String name = "a";
         int age = 0;
@@ -54,11 +56,9 @@ public class Application2 {
         }
 
         System.out.println("Ocjene :");
-        System.out.println(" 1: " + counterMap.get(1));
-        System.out.println(" 2: " + counterMap.get(2));
-        System.out.println(" 3: " + counterMap.get(3));
-        System.out.println(" 4: " + counterMap.get(4));
-        System.out.println(" 5: " + counterMap.get(5));
+        for (int i = MIN_GRADE; i<=MAX_GRADE; i++) {
+            System.out.println(i + ": " + counterMap.get(i));
+        }
 
     }
 }
