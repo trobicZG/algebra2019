@@ -39,6 +39,8 @@ public class Application {
         for (int i=0; i<persons.size(); i++) {
             System.out.println(persons.get(i).getName() + "  " + persons.get(i).getAge());
         }
+        System.out.println(" Najstarija osoba : " + persons.get(0).getName());
+        System.out.println(" Najmlađa osoba : " + persons.get(persons.size()-1).getName());
     }
 
 }
