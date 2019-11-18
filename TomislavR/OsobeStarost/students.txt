@@ -1,0 +1,5 @@
+Marko,19,4
+Maja,18,5
+Ivan,19,5
+Ivana,17,3
+Martin,17,5
