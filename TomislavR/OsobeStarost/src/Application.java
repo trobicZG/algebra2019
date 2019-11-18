@@ -30,7 +30,12 @@ public class Application {
         }
 
         Collections.sort(persons);
-        System.out.println( "Osobe poredane po dobi :");
+        System.out.println( "Osobe poredane po dobi (od najmlađe do najstarije) :");
+        for (int i=0; i<persons.size(); i++) {
+            System.out.println(persons.get(i).getName() + "  " + persons.get(i).getAge());
+        }
+        Collections.reverse(persons);
+        System.out.println( "Osobe poredane po dobi (od najstarije do najmlađe) :");
         for (int i=0; i<persons.size(); i++) {
             System.out.println(persons.get(i).getName() + "  " + persons.get(i).getAge());
         }
