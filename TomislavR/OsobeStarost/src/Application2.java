@@ -57,7 +57,7 @@ public class Application2 {
 
         System.out.println("Ocjene :");
         for (int i = MIN_GRADE; i<=MAX_GRADE; i++) {
-            System.out.println(i + ": " + counterMap.get(i));
+            System.out.println(i + ": " + (counterMap.get(i) == null ? 0 : counterMap.get(i)));
         }
 
     }
