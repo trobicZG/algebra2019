@@ -15,13 +15,12 @@ public class Application {
             if (name.equals(EXIT_INPUT))
                 break;
             while (true) {
-                System.out.print( " Unesite broj godina: ");
+                System.out.print(" Unesite broj godina: ");
                 try {
                     age = Integer.parseInt(scanner.nextLine());
                     break;
-                }
-                catch (IllegalArgumentException e) {
-                    System.out.println( "Krivi unos broja godina, probajte opet!");
+                } catch (IllegalArgumentException e) {
+                    System.out.println("Krivi unos broja godina, probajte opet!");
                 }
             }
 
@@ -30,17 +29,17 @@ public class Application {
         }
 
         Collections.sort(persons);
-        System.out.println( "Osobe poredane po dobi (od najmlađe do najstarije) :");
-        for (int i=0; i<persons.size(); i++) {
+        System.out.println("Osobe poredane po dobi (od najmlađe do najstarije) :");
+        for (int i = 0; i < persons.size(); i++) {
             System.out.println(persons.get(i).getName() + "  " + persons.get(i).getAge());
         }
         Collections.reverse(persons);
-        System.out.println( "Osobe poredane po dobi (od najstarije do najmlađe) :");
-        for (int i=0; i<persons.size(); i++) {
+        System.out.println("Osobe poredane po dobi (od najstarije do najmlađe) :");
+        for (int i = 0; i < persons.size(); i++) {
             System.out.println(persons.get(i).getName() + "  " + persons.get(i).getAge());
         }
         System.out.println(" Najstarija osoba : " + persons.get(0).getName());
-        System.out.println(" Najmlađa osoba : " + persons.get(persons.size()-1).getName());
+        System.out.println(" Najmlađa osoba : " + persons.get(persons.size() - 1).getName());
     }
 
 }
