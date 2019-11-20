@@ -1,0 +1,7 @@
+Kreirati listu 5 vozila.
+Svako vozilo ima proizvodaca, model, godinu proizvodnje i snagu u KW
+
+Vozila sortirati od najmladeg prema najstarijem
+
+Ispsati koje je najmlade, koje je najstarije
+Ispisati prosjek starosti svih vozila
