@@ -13,8 +13,8 @@ public class Application {
 
         Collections.sort(vehicles);
 
-        System.out.println("Najmlade: " + vehicles.get(4));
-        System.out.println("Najstarije: " + vehicles.get(0));
+        System.out.println("Najmlade: " + Collections.min(vehicles));
+        System.out.println("Najstarije: " + Collections.max(vehicles));
 
         System.out.println("Prosjek starosti: " + getAverage(vehicles));
     }
