@@ -3,8 +3,8 @@ import java.util.List;
 
 public interface LoanInterface {
 
-    Loan createLoan(Long bookId, Long memberId, Long employeeId, LocalDate startingDate);
+    void createLoan(Long bookId, Long memberId, Long employeeId, LocalDate startingDate);
 
-    List<Loan> completeLoan(Long loanId, List<Loan> loans);
+    void completeLoan(Long loanId);
 
 }
