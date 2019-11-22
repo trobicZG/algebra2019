@@ -1,10 +1,7 @@
 package task3;
 
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.Map;
-import java.util.Scanner;
+import java.util.*;
 
 public class Application {
 
@@ -71,5 +68,7 @@ public class Application {
         for (int i = MIN_GRADE; i <= MAX_GRADE; i++) {
             System.out.println(i + " : " + (gradesMap.get(i) == null ? 0 : gradesMap.get(i)));
         }
+
+        List<Integer> abc = new LinkedList<>();
     }
 }

@@ -20,15 +20,14 @@ public class Application {
     }
 
     private static double getAverage(ArrayList<Vehicle> vehicles) {
-        int counter = 0;
         int sum = 0;
 
         for (Vehicle v : vehicles) {
             sum += LocalDate.now().getYear() - v.getYearOfManufacturing();
-            counter++;
+
         }
 
-        return sum / counter;
+        return sum / vehicles.size();
     }
 }
 
