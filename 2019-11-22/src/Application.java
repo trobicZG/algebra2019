@@ -1,3 +1,4 @@
+import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -7,6 +8,7 @@ public class Application {
         List<Member> members = new ArrayList<>();
         List<Employee> employees = new ArrayList<>();
         List<Book> books = new ArrayList<>();
+        List<Loan> loans = new ArrayList<>();
 
         Author author1 = new Author("Pero", "Peric");
         Author author2 = new Author("Ivana", "Ivanic");
@@ -25,10 +27,12 @@ public class Application {
         books.add(new Book(1L, "Prva knjiga", authors1));
         books.add(new Book(2L, "Druga knjiga", authors2));
 
-        //1. lista clanova i listu knjiznicara i listu knjiga
-        //2 Neki clan posudi knjigu
-        //3. Vrati knjigu -> pregledaj za zakasninu
+        LoanService loanService = new LoanService();
+        loans.add(loanService.createLoan(books.get(0).getId(), members.get(0).getId(), employees.get(0).getId(), LocalDate.now()));
+        loans.add(loanService.createLoan(books.get(1).getId(), members.get(0).getId(), employees.get(0).getId(), LocalDate.now()));
+        loans.add(loanService.createLoan(books.get(0).getId(), members.get(1).getId(), employees.get(0).getId(), LocalDate.now()));
 
+        
 
     }
 }
