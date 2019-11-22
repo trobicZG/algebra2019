@@ -32,7 +32,8 @@ public class Application {
         loans.add(loanService.createLoan(books.get(1).getId(), members.get(0).getId(), employees.get(0).getId(), LocalDate.now()));
         loans.add(loanService.createLoan(books.get(0).getId(), members.get(1).getId(), employees.get(0).getId(), LocalDate.now()));
 
-        
+        Long idToRemove = 1574451348541L;
+        loans = loanService.completeLoan(idToRemove, loans);
 
     }
 }
