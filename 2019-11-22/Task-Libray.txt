@@ -1,0 +1,38 @@
+Knjiznica
+------------------
+imamo clanove i imamo zaposlenike (knjiznicari)
+
+CLAN - Member
+{
+ime, prezime, starost, id (C-0001)
+- moze posuditi knjigu, uclaniti se, platiti zakasninu, vratiti knjigu, ispisati se,
+}
+
+KNJIZNCIAR/ZAPOSLENIK - Employee
+{
+ime, prezime, starost, id (Z-0001)
+- pogledati koji je clan koju knjigu posudio, pogledati koji su clanovi pojedinu knjigu posudili, upisati clana, ispisati clana, izbrisati/dodati knjigu u inventar
+}
+
+KNJIGA - Book
+{
+ID, Naslov i autori
+}
+
+AUTOR - Author
+{
+Ime, prezime
+}
+
+POSUDBA - Loan
+{
+ID knjige, ID clana, ID knjiznicara, datum izdavanja, datum povrata
+}
+
+Knjiznicar moze izdati knjigu clanu
+Clan moze vratiti knjigu
+
+Kod povrata knjige pogledati datum izadavanja i datom vracanja. Ako je veci od 30 onda naplaiti zakasninu
+
+
+

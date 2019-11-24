@@ -1,0 +1,9 @@
+Radimo unos osoba kroz konzolu dok korisnik ne stisne neku tipku za izlaz iz unosa.
+Za sve osobe treba naci najmladu i najstariju.
+Osobe ispisati van po starosti od najmlade prema najstarijoj.
+
+--- zad3 - nastavak na zad 2
+Omoguciti i unos ocijena za studente/osobe
+Spremamo ih u txt
+
+Kada zavrsimo s unosom trebamo ih procitati sve iz datoteke i prikazati koliko ih ima koju ocjenu
