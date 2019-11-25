@@ -1,7 +1,11 @@
+package library;
+
+import library.Loan;
+
 import java.util.ArrayList;
 import java.util.List;
 
-public abstract class LoanDatabase {
+abstract class LoanDatabase {
 
     private static Long lastSavedId = 0L;
     private static List<Loan> loanList = new ArrayList<>();

@@ -1,3 +1,5 @@
+package library;
+
 public class Member extends LibraryPersonAbstract {
     public Member(Long id, String fName, String lName, Integer age) {
         this.id = id;
